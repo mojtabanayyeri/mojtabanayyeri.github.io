@@ -4,96 +4,86 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Mojtaba Nayyeri</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+    rel="stylesheet"
+  />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <input type="checkbox" id="nav-toggle" class="nav-toggle" />
-  <header class="header">
-    <label for="nav-toggle" class="hamburger">
-      ☰
-    </label>
-    <h1 class="site-title">Mojtaba Nayyeri</h1>
-  </header>
+  <div class="container">
+    <aside class="sidebar">
+      <h1 class="name">Mojtaba Nayyeri</h1>
+      <img class="avatar" src="/assets/images/headshot.jpg" alt="Mojtaba Nayyeri" />
+      <nav class="links">
+        <a href="cv.pdf" target="_blank">curriculum vitae</a>
+        <a href="https://scholar.google.com/citations?user=X785350AAAAJ" target="_blank">google scholar</a>
+        <a href="mailto:mojtaba.nayyeri@ki.uni-stuttgart.de">email</a>
+        <a href="https://github.com/mojtabanayyeri" target="_blank">github</a>
+        <a href="https://www.linkedin.com/in/mojtaba-nayyeri-a2047378/" target="_blank">linkedin</a>
+        <a href="https://x.com/MojtabaNayyeri" target="_blank">twitter</a>
+        <a href="blog.html">blog</a>
+      </nav>
+    </aside>
 
-  <aside class="sidebar">
-    <div class="profile">
-      <img src="profile.jpg" alt="Mojtaba Nayyeri" class="avatar" />
-      <p class="name">Mojtaba Nayyeri</p>
-    </div>
-    <nav class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="Mojtaba_CV.pdf" target="_blank">CV</a>
-      <a href="https://scholar.google.com/citations?user=X785350AAAAJ" target="_blank">Scholar</a>
-      <a href="mailto:mojtaba.nayyeri@ki.uni-stuttgart.de">Email</a>
-      <a href="https://github.com/mojtabanayyeri" target="_blank">GitHub</a>
-      <a href="https://www.linkedin.com/in/mojtaba-nayyeri-a2047378/" target="_blank">LinkedIn</a>
-      <a href="https://x.com/MojtabaNayyeri" target="_blank">Twitter</a>
-      <a href="blog.html">Blog</a>
-    </nav>
-  </aside>
+    <main class="main-content">
+      <section class="intro">
+        <p>
+          Hello there! I’m a Senior Researcher at the Institute for Artificial Intelligence, University of Stuttgart, working with
+          Prof. Dr. Steffen Staab on Graph Foundation Models, Geometric Deep Learning, Knowledge Graph Embedding and LLMs.
+        </p>
+        <p>
+          My research interests include Graph Foundation Models, Generative AI, Knowledge Graph Analysis, Large Language Models,
+          Agentic AI, Geometric Deep Learning, and Semantic‑guided Deep Learning.
+        </p>
+        <p>
+          Feel free to reach out at <a href="mailto:mojtaba.nayyeri@ki.uni-stuttgart.de">mojtaba.nayyeri@ki.uni-stuttgart.de</a> if you’d
+          like to discuss ideas!
+        </p>
+      </section>
 
-  <main class="main">
-    <section class="card intro">
-      <h2>Hello there!</h2>
-      <p>
-        I’m a Senior Researcher at the Institute for Artificial Intelligence,
-        University of Stuttgart, working with Prof. Dr. Steffen Staab on Graph
-        Foundation Models, Geometric Deep Learning, Knowledge Graph Embedding
-        and LLMs.
-      </p>
-      <p>
-        My research interests include Graph Foundation Models, Generative AI,
-        Knowledge Graph Analysis, Large Language Models, Agentic AI,
-        Geometric Deep Learning, and Semantic‑guided Deep Learning.
-      </p>
-      <p>
-        Feel free to <a href="mailto:mojtaba.nayyeri@ki.uni-stuttgart.de">email me</a> if you’d like to discuss ideas!
-      </p>
-    </section>
+      <section class="updates">
+        <h2>Updates</h2>
+        <div class="updates-list">
+          <div class="update">
+            <span class="date">June 2023 – Present:</span>
+            Senior Researcher, Institute for Artificial Intelligence, University of Stuttgart (Advisor: Prof. Dr. Steffen Staab).
+          </div>
+          <div class="update">
+            <span class="date">June 2021 – Present:</span>
+            Ph.D. in Computer Science, University of Stuttgart (Supervisor: Prof. Dr. Steffen Staab; Thesis: “Pattern‑aware Knowledge Graph Embeddings”).
+          </div>
+          <div class="update">
+            <span class="date">Mar 2018 – Dec 2021:</span>
+            Researcher, Smart Data Analytics, Department of Computer Science, University of Bonn.
+          </div>
+        </div>
+      </section>
 
-    <section class="card updates">
-      <h2>Updates</h2>
-      <ul>
-        <li>
-          <time>Jun 2023 – Present</time>
-          Senior Researcher, Institute for Artificial Intelligence, University of Stuttgart.
-        </li>
-        <li>
-          <time>Jun 2021 – Present</time>
-          Ph.D. in Computer Science, University of Stuttgart (Thesis: “Pattern‑aware Knowledge Graph Embeddings”).
-        </li>
-        <li>
-          <time>Mar 2018 – Dec 2021</time>
-          Researcher, Smart Data Analytics, Department of Computer Science, University of Bonn.
-        </li>
-      </ul>
-    </section>
-
-    <section class="card publications">
-      <h2>Publications</h2>
-      <ul>
-        <li>
-          Pan, J., Nayyeri, M., Mohammed, O., … & Staab, S. (2025).
-          “Towards Foundation Model on Temporal Knowledge Graph Reasoning.”
-          <em>arXiv</em>:2506.06367.
-        </li>
-        <li>
-          Mohammed, O., Pan, J., Nayyeri, M., … & Staab, S. (2025).
-          “Full-History Graphs with Edge‑Type Decoupled Networks for Temporal Reasoning.”
-          <em>ECAI 25</em>.
-        </li>
-        <li>
-          Azarafza, M., Nayyeri, M., Pasandideh, F., … & Rettberg, A. (2025).
-          “Mathematical Reasoning for UAVs: A RAG‑Based Approach.”
-          <em>arXiv</em>:2506.04998.
-        </li>
-      </ul>
-      <p class="more">
-        <a href="https://scholar.google.com/citations?user=X785350AAAAJ" target="_blank">
-          See full list on Google Scholar →
-        </a>
-      </p>
-    </section>
-  </main>
+      <section class="publications">
+        <h2>Publications</h2>
+        <ul>
+          <li>
+            Pan, J., Nayyeri, M., Mohammed, O., Hernandez, D., Zhang, R., Cheng, C., &amp; Staab, S. (2025).
+            “Towards Foundation Model on Temporal Knowledge Graph Reasoning.” arXiv:2506.06367. (Submitted NeurIPS 25)
+          </li>
+          <li>
+            Mohammed, O., Pan, J., Nayyeri, M., Hernandez, D., &amp; Staab, S. (2025).
+            “Full-History Graphs with Edge‑Type Decoupled Networks for Temporal Reasoning.” Accepted ECAI 25.
+          </li>
+          <li>
+            Azarafza, M., Nayyeri, M., Pasandideh, F., Staab, S., &amp; Rettberg, A. (2025).
+            “Mathematical Reasoning for Unmanned Aerial Vehicles: A RAG‑Based Approach.” arXiv:2506.04998. (Submitted EMNLP 25)
+          </li>
+          <li>…</li>
+        </ul>
+        <p>
+          <a href="https://scholar.google.com/citations?user=X785350AAAAJ" target="_blank">
+            See full list on Google Scholar
+          </a>
+        </p>
+      </section>
+    </main>
+  </div>
 </body>
 </html>
