@@ -23,18 +23,18 @@ a:hover {
 .container {
   display: flex;
   min-height: 100vh;
-  column-gap: 2rem;
+  gap: 1rem;
 }
 .sidebar {
-  width: 260px;
-  padding: 2rem;
-  flex-shrink: 0;
-  position: sticky;
-  top: 0;
+  width: 220px;
+  padding: 2rem 1rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .main-content {
   flex: 1;
-  padding: 8rem 2rem 2rem;
+  padding: 8rem 2rem 2rem 1rem;  /* top‑right‑bottom‑left: only 1rem on the left now */
   overflow-x: hidden;
 }
 
