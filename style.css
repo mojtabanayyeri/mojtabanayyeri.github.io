@@ -109,3 +109,9 @@ a:hover {
   font-weight: 700;
   color: #0066ff;
 }
+/* constrain and center all sections */
+.content-wrapper {
+  max-width: 800px;
+  margin: 0 auto;      /* center horizontally */
+  padding: 1rem 0;     /* optional vertical breathing room */
+}
