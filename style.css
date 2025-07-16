@@ -1,111 +1,134 @@
-/* -- reset & base -- */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* Variables & Reset */
+:root {
+  --clr-bg: #f9f9fb;
+  --clr-surface: #ffffff;
+  --clr-accent: #4f46e5;
+  --clr-text: #333333;
+  --clr-muted: #666666;
+  --shadow: 0 2px 8px rgba(0,0,0,0.05);
+  --radius: 0.75rem;
+  --gap: 1.5rem;
 }
+* { margin: 0; padding: 0; box-sizing: border-box; }
 body {
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  color: #333;
-  background: #fff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
+  background: var(--clr-bg);
+  color: var(--clr-text);
   line-height: 1.6;
 }
-a {
-  color: #0066ff;
-  text-decoration: none;
+
+/* Header & Nav‐Toggle */
+.nav-toggle { display: none; }
+.header {
+  position: sticky; top: 0; z-index: 10;
+  background: var(--clr-surface);
+  display: flex; align-items: center;
+  padding: 0.75rem var(--gap);
+  box-shadow: var(--shadow);
 }
-a:hover {
-  text-decoration: underline;
+.hamburger {
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-right: var(--gap);
+  display: none;
+}
+.site-title {
+  font-size: 1.25rem;
+  color: var(--clr-accent);
 }
 
-/* -- layout -- */
-.container {
-  display: flex;
-  min-height: 100vh;
-}
+/* Layout */
 .sidebar {
-  width: 260px;
-  padding: 2rem;
-  flex-shrink: 0;
-  position: sticky;
-  top: 0;
+  position: fixed; top: 0; left: 0;
+  width: 240px; height: 100vh;
+  background: var(--clr-surface);
+  padding: var(--gap) 1rem;
+  box-shadow: var(--shadow);
+  display: flex; flex-direction: column;
+  gap: var(--gap);
+  transition: transform 0.3s ease;
 }
-.main-content {
-  flex: 1;
-  padding: 2rem 3rem;
-  overflow-x: hidden;
+.main {
+  margin-left: 260px; padding: var(--gap) 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--gap);
 }
 
-/* -- sidebar content -- */
-.name {
-  font-size: 1.75rem;
-  font-weight: 400;
-  margin-bottom: 1.5rem;
+/* Profile */
+.profile {
+  text-align: center;
 }
 .avatar {
-  width: 100%;
-  border-radius: 8px;
-  margin-bottom: 1.5rem;
+  width: 120px; height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: var(--shadow);
+  margin: 0 auto 0.75rem;
 }
-.links a {
-  display: block;
-  margin-bottom: 0.75rem;
-  font-weight: 300;
-  color: #666;
-}
-.links a:hover {
-  color: #0066ff;
+.name {
+  font-size: 1.125rem;
+  font-weight: 600;
 }
 
-/* -- intro -- */
-.intro p {
-  margin-bottom: 1.25rem;
+/* Nav links */
+.nav-links {
+  display: flex; flex-direction: column; gap: 0.5rem;
+}
+.nav-links a {
+  color: var(--clr-muted);
+  padding: 0.5rem;
+  border-radius: var(--radius);
+  transition: background 0.2s, color 0.2s;
+}
+.nav-links a:hover,
+.nav-links a:focus {
+  background: var(--clr-accent);
+  color: #fff;
 }
 
-/* -- updates -- */
-.updates {
-  margin-top: 3rem;
+/* Cards */
+.card {
+  background: var(--clr-surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: var(--gap);
 }
-.updates h2 {
-  font-size: 1.5rem;
-  font-weight: 400;
-  color: #0066ff;
-  margin-bottom: 1rem;
-}
-.updates-list {
-  max-height: 220px;
-  overflow-y: auto;
-  padding-right: 0.5rem;
-}
-.update {
-  margin-bottom: 1rem;
-  font-size: 0.95rem;
-}
-.date {
-  font-weight: 700;
-  margin-right: 0.5rem;
+.card h2 {
+  color: var(--clr-accent);
+  margin-bottom: 0.5rem;
 }
 
-/* -- publications -- */
-.publications {
-  margin-top: 3rem;
-}
-.publications h2 {
-  font-size: 1.5rem;
-  font-weight: 400;
-  color: #0066ff;
-  margin-bottom: 1rem;
-}
+/* Updates & Publications Lists */
+.updates ul,
 .publications ul {
   list-style: none;
 }
+.updates li,
 .publications li {
   margin-bottom: 0.75rem;
-  font-size: 0.95rem;
 }
-/* highlight current page in sidebar */
-.links a.active {
-  font-weight: 700;
-  color: #0066ff;
+.updates time {
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+.more a {
+  color: var(--clr-accent);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hamburger { display: block; }
+  .sidebar {
+    transform: translateX(-100%);
+  }
+  .nav-toggle:checked ~ .sidebar {
+    transform: translateX(0);
+  }
+  .main {
+    margin-left: 0;
+    padding: var(--gap);
+  }
 }
