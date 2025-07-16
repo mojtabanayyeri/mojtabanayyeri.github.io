@@ -19,13 +19,22 @@ a:hover {
   text-decoration: underline;
 }
 
-/* -- layout -- */
 .container {
   display: flex;
   min-height: 100vh;
-  gap: 1rem;
+  /* make the layout no wider than 1200px, and center it */
+  max-width: 1200px;
+  margin: 0 auto;    /* auto‑margins left & right */
+  gap: 1.5rem;       /* space between sidebar and main */
+  padding: 2rem 1rem;/* optional breathing room on very narrow viewports */
 }
-.sidebar {
+/* -- layout -- */
+/* .container {
+  display: flex;
+  min-height: 100vh;
+  gap: 1rem;
+} */
+/* .sidebar {
   width: 220px;
   padding: 2rem 1rem 2rem 2rem;
   display: flex;
@@ -33,7 +42,7 @@ a:hover {
   justify-content: center;
   position: static; 
   height: 100vh;
-}
+} */
 .main-content {
   flex: 1;
   padding: 8rem 2rem 2rem 1rem;  /* top‑right‑bottom‑left: only 1rem on the left now */
