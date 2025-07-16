@@ -111,7 +111,7 @@ a:hover {
 }
 /* constrain and center all sections */
 .content-wrapper {
-  max-width: 650px;
+  max-width: 750px;
   margin: 0 auto;      /* center horizontally */
   padding: 1rem 0;     /* optional vertical breathing room */
 }
