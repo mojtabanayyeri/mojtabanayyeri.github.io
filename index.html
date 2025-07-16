@@ -8,115 +8,94 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
-    /* Global */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Inter', sans-serif; color: #222; background: #fff; display: flex; }
-    a { color: #0066cc; text-decoration: none; }
-    a:hover { text-decoration: underline; }
+    /* Reset & base */
+    * { margin:0; padding:0; box-sizing:border-box; }
+    html, body { height:100%; }
+    body { display:flex; font-family:'Inter',sans-serif; font-size:16px; color:#222; background:#fff; }
+    a { color:#3182ce; text-decoration:none; }
+    a:hover { text-decoration:underline; }
+
+    /* Layout */
+    .container { display:grid; grid-template-columns:260px 1fr; height:100%; }
+    aside { padding:2rem 1.5rem; border-right:1px solid #eee; }
+    main { padding:2rem; overflow-y:auto; }
 
     /* Sidebar */
-    .sidebar {
-      width: 280px;
-      padding: 2rem 1.5rem;
-      border-right: 1px solid #eee;
-    }
-    .sidebar img {
-      width: 100%;
-      border-radius: 8px;
-      margin-bottom: 1rem;
-    }
-    .sidebar h1 {
-      font-size: 1.75rem;
-      font-weight: 600;
-      margin-bottom: 0.25rem;
-    }
-    .sidebar p {
-      font-size: 0.9rem;
-      color: #555;
-      margin-bottom: 1.5rem;
-    }
-    .sidebar ul {
-      list-style: none;
-      margin-top: 1rem;
-      line-height: 1.6;
-    }
-    .sidebar ul li a { font-size: 0.95rem; color: #555; }
+    aside img { width:100%; border-radius:6px; margin-bottom:1rem; }
+    aside h1 { font-size:1.75rem; font-weight:600; margin-bottom:0.25rem; }
+    aside p { font-size:0.875rem; color:#555; margin-bottom:1rem; }
+    aside ul { list-style:none; line-height:1.8; font-size:0.9rem; color:#555; }
+    aside ul li + li { margin-top:0.25rem; }
+    aside ul li a { color:#555; }
 
-    /* Main Content */
-    .main {
-      flex: 1;
-      padding: 2rem 3rem;
-      overflow-y: auto;
-    }
-    section { margin-bottom: 2.5rem; }
-    h2 {
-      font-size: 1.5rem;
-      font-weight: 400;
-      color: #0066cc;
-      border-bottom: 2px solid #0066cc;
-      padding-bottom: 0.25rem;
-      margin-bottom: 1rem;
-      display: inline-block;
-    }
-    p, ul { font-size: 1rem; color: #333; line-height: 1.6; }
-    ul li { margin-bottom: 0.5rem; }
+    /* Sections */
+    section { margin-bottom:2.5rem; }
+    h2 { font-size:1.5rem; font-weight:400; color:#3182ce; border-bottom:2px solid #3182ce; display:inline-block; margin-bottom:1rem; }
+    p, ul { color:#333; line-height:1.6; }
+    ul li { margin-bottom:0.5rem; }
 
-    /* Updates */
-    .updates {
-      max-height: 200px;
-      overflow-y: auto;
-      padding-right: 0.5rem;
-      margin-bottom: 1.5rem;
-    }
-    .updates li { font-size: 0.9rem; color: #444; }
+    /* Updates scroll */
+    .updates { max-height:180px; overflow-y:auto; padding-right:0.5rem; }
+    .updates li { font-size:0.9rem; color:#444; }
   </style>
 </head>
 <body>
-  <aside class="sidebar">
-    <img src="assets/images/headshot.jpg" alt="Mojtaba Nayyeri">
-    <h1>Mojtaba Nayyeri</h1>
-    <p>Senior Researcher in Artificial Intelligence</p>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#updates">Updates</a></li>
-      <li><a href="#publications">Publications</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </aside>
-
-  <div class="main">
-    <section id="about">
-      <h2>About Me</h2>
-      <p>I’m a Senior Researcher at the Institute for Artificial Intelligence, University of Stuttgart, advised by Steffen Staab and Antonio Vergari. My work lies at the intersection of Foundation Models (LLMs) and Knowledge Graphs, exploring their integration for real-world AI applications.</p>
-    </section>
-
-    <section id="updates">
-      <h2>Updates</h2>
-      <ul class="updates">
-        <li><strong>May 2025:</strong> Our work on corrective unlearning in GNNs to appear in ICML 2025.</li>
-        <li><strong>April 2025:</strong> Best Paper Award for persistent homology in content detection @ BeyondFacts.</li>
-        <li><strong>March 2025:</strong> Joined the MPI IMPRS-IS PhD program.</li>
-        <li><strong>Feb 2025:</strong> Leveraging persistent homology for controversial content detection @ WWW 2025.</li>
-      </ul>
-    </section>
-
-    <section id="publications">
-      <h2>Publications</h2>
+  <div class="container">
+    <aside>
+      <img src="assets/images/headshot.jpg" alt="Mojtaba Nayyeri">
+      <h1>Mojtaba Nayyeri</h1>
+      <p>Senior Researcher in Artificial Intelligence</p>
       <ul>
-        <li>SEMMA: A Semantic Aware Knowledge Graph Foundation Model, _NeurIPS_ 2024.</li>
-        <li>Complex-NBFNet: Geometric GNNs over Complex Numbers, _ICLR_ 2024.</li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#updates">Updates</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#teaching">Teaching</a></li>
+        <li><a href="#cv">CV</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
-    </section>
-
-    <section id="contact">
-      <h2>Contact</h2>
-      <ul>
-        <li>Email: <a href="mailto:you@domain.edu">you@domain.edu</a></li>
-        <li>ORCID: <a href="https://orcid.org/0000-0000-0000-0000">0000-0000-0000-0000</a></li>
-        <li>GitHub: <a href="https://github.com/yourusername">github.com/yourusername</a></li>
-        <li>LinkedIn: <a href="https://linkedin.com/in/yourprofile">linkedin.com/in/yourprofile</a></li>
-      </ul>
-    </section>
+    </aside>
+    <main>
+      <section id="about">
+        <h2>About Me</h2>
+        <p>Hello! I’m a Senior Researcher at the Institute for Artificial Intelligence, University of Stuttgart, advised by Steffen Staab and Antonio Vergari. My work focuses on integrating foundational LLMs with knowledge graphs for semantic-aware AI solutions.</p>
+      </section>
+      <section id="updates">
+        <h2>Updates</h2>
+        <ul class="updates">
+          <li><strong>May 2025:</strong> Our paper on corrective unlearning in GNNs accepted to ICML 2025.</li>
+          <li><strong>April 2025:</strong> Won Best Paper Award for persistent homology in content detection @ BeyondFacts.</li>
+          <li><strong>March 2025:</strong> Joined the MPI IMPRS-IS PhD program.</li>
+          <li><strong>Feb 2025:</strong> Presented work on controversial content detection @ WWW 2025.</li>
+          <li><strong>Aug 2024:</strong> Began ELLIS PhD program co-supervised by Staab & Vergari.</li>
+        </ul>
+      </section>
+      <section id="publications">
+        <h2>Publications</h2>
+        <ul>
+          <li>SEMMA: A Semantic-Aware KG Foundation Model — _NeurIPS_ 2024.</li>
+          <li>Complex-NBFNet for GNNs over Complex Numbers — _ICLR_ 2024.</li>
+        </ul>
+      </section>
+      <section id="teaching">
+        <h2>Teaching</h2>
+        <ul>
+          <li><strong>AI 101:</strong> Intro to Machine Learning (Winter 2024)</li>
+          <li><strong>Graph ML:</strong> Advanced Topics (Spring 2025)</li>
+        </ul>
+      </section>
+      <section id="cv">
+        <h2>CV</h2>
+        <p><a href="cv.pdf" target="_blank">Download Full CV (PDF)</a></p>
+      </section>
+      <section id="contact">
+        <h2>Contact</h2>
+        <ul>
+          <li>Email: <a href="mailto:you@domain.edu">you@domain.edu</a></li>
+          <li>ORCID: <a href="https://orcid.org/0000-0000-0000-0000">0000-0000-0000-0000</a></li>
+          <li>GitHub: <a href="https://github.com/yourusername">github.com/yourusername</a></li>
+        </ul>
+      </section>
+    </main>
   </div>
 </body>
 </html>
