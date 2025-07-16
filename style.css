@@ -149,5 +149,5 @@ a:hover {
 
 .links a {
   display: block;
-  margin-bottom: 0.5rem;      /* was .75rem; now more gap */
+  margin-bottom: 0.15rem;      /* was .75rem; now more gap */
 }
