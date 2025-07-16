@@ -1,78 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mojtaba Nayyeri — Senior Researcher</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <title>Mojtaba Nayyeri — Senior Researcher</title>
   <style>
     :root {
       --primary: #1a202c;
       --accent: #3182ce;
-      --bg: #f7fafc;
+      --bg-light: #f7fafc;
       --font-body: 'Inter', sans-serif;
     }
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: var(--font-body);
       color: var(--primary);
       background: white;
-      line-height: 1.75;
+      line-height: 1.6;
     }
     header {
       background: var(--primary);
       color: white;
-      padding: 2rem 6%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
+      padding: 2rem 5%;
     }
     .hero-content {
       display: flex;
-      gap: 2rem;
-      align-items: center;
       flex-wrap: wrap;
+      align-items: center;
+      gap: 1.5rem;
     }
     .headshot {
       width: 120px;
       height: 120px;
-      object-fit: cover;
       border-radius: 50%;
+      object-fit: cover;
       border: 3px solid white;
     }
     h1 {
-      font-size: 2rem;
+      font-size: 2.25rem;
       font-weight: 700;
     }
     .subtitle {
-      opacity: 0.85;
+      font-size: 1.125rem;
+      opacity: .9;
+      margin-top: 0.25rem;
     }
     nav {
       margin-top: 1rem;
     }
     .nav-links a {
-      margin-right: 1.5rem;
-      font-weight: 600;
       color: white;
+      margin-right: 1.25rem;
+      font-weight: 600;
       text-decoration: none;
+      transition: opacity .2s;
     }
-    .nav-links a:hover {
-      text-decoration: underline;
-    }
+    .nav-links a:hover { opacity: .8; }
     section {
-      padding: 3rem 6%;
-      background: white;
+      padding: 3rem 5%;
     }
-    .section.alt {
-      background: var(--bg);
-    }
+    section.alt { background: var(--bg-light); }
     h2 {
       font-size: 1.75rem;
       margin-bottom: 1rem;
@@ -82,55 +73,44 @@
     }
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
       gap: 1.5rem;
+      margin-top: 1rem;
     }
     .card {
       background: white;
       padding: 1.5rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-      transition: transform 0.3s ease;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      transition: transform .3s;
     }
-    .card:hover {
-      transform: translateY(-4px);
-    }
-    ul.pub-list {
-      list-style: none;
-      padding-left: 0;
-    }
-    .pub-list li {
-      margin-bottom: 1rem;
-    }
-    .pub-year {
-      font-weight: 600;
-      margin-right: .5rem;
-    }
+    .card:hover { transform: translateY(-4px); }
+    ul.pub-list { list-style: none; margin-top: 1rem; }
+    .pub-list li { margin-bottom: 0.75rem; }
+    .pub-year { font-weight: 600; margin-right: .5rem; }
     .btn {
       display: inline-block;
-      padding: 0.75rem 1.25rem;
+      padding: .75rem 1.5rem;
       background: var(--accent);
       color: white;
       border-radius: 6px;
       text-decoration: none;
       font-weight: 600;
-      transition: background 0.3s ease;
+      transition: background .3s;
     }
-    .btn:hover {
-      background: #2b6cb0;
-    }
+    .btn:hover { background: #2b6cb0; }
     footer {
-      background: var(--bg);
-      padding: 2rem 0;
       text-align: center;
-      font-size: 0.875rem;
+      padding: 2rem 0;
+      background: var(--bg-light);
+      font-size: .875rem;
     }
   </style>
 </head>
 <body>
   <header>
     <div class="hero-content">
-      <img src="assets/images/headshot.jpg" alt="Mojtaba Nayyeri" class="headshot" />
+      <img src="assets/images/headshot.jpg" alt="Mojtaba Nayyeri" class="headshot">
       <div>
         <h1>Mojtaba Nayyeri</h1>
         <p class="subtitle">Senior Researcher in Artificial Intelligence</p>
@@ -148,10 +128,10 @@
 
   <section id="about">
     <h2>About Me</h2>
-    <p>I’m currently a senior researcher at the Institute for Artificial Intelligence, University of Stuttgart, specializing in Graph-based machine learning, geometric deep learning, large language models, and Semantic-aware generative AI. My work focuses on [Key Contributions].</p>
+    <p>I’m a Senior Researcher at the Institute for Artificial Intelligence, University of Stuttgart, specializing in graph-based ML, geometric deep learning, LLMs, and semantic-aware generative AI. My work focuses on [Key Contributions].</p>
   </section>
 
-  <section id="research" class="section alt">
+  <section id="research" class="alt">
     <h2>Research</h2>
     <div class="grid">
       <div class="card">
@@ -168,32 +148,41 @@
   <section id="publications">
     <h2>Selected Publications</h2>
     <ul class="pub-list">
-      <li><span class="pub-year">2024</span> <strong>Title A</strong>, <em>Journal X</em>. <a href="#">PDF</a></li>
-      <li><span class="pub-year">2023</span> <strong>Title B</strong>, <em>Conference Y</em>. <a href="#">Slides</a></li>
+      <li><span class="pub-year">2024</span><strong>Title A</strong>, <em>Journal X</em>. <a href="#">PDF</a></li>
+      <li><span class="pub-year">2023</span><strong>Title B</strong>, <em>Conference Y</em>. <a href="#">Slides</a></li>
     </ul>
   </section>
 
-  <section id="teaching" class="section alt">
+  <section id="teaching" class="alt">
     <h2>Teaching</h2>
-    <ul>
-      <li><strong>Course 101:</strong> Introduction to [Topic] (Semester, Year). <a href="#">Syllabus PDF</a></li>
-      <li><strong>Course 202:</strong> Advanced [Topic] (Semester, Year). <a href="#">Syllabus PDF</a></li>
+    <ul class="pub-list">
+      <li><strong>Course 101:</strong> Intro to [Topic] (Semester, Year). <a href="#">PDF</a></li>
+      <li><strong>Course 202:</strong> Advanced [Topic] (Semester, Year). <a href="#">PDF</a></li>
     </ul>
   </section>
 
   <section id="cv">
     <h2>Curriculum Vitae</h2>
-    <a class="btn" href="cv.pdf" target="_blank">Download Full CV (PDF)</a>
+    <a href="cv.pdf" class="btn" target="_blank">Download Full CV</a>
   </section>
 
-  <section id="contact" class="section alt">
+  <section id="contact" class="alt">
     <h2>Contact</h2>
     <p>Email: <a href="mailto:you@domain.edu">you@domain.edu</a></p>
     <p>ORCID: <a href="https://orcid.org/your-orcid">0000-0000-0000-0000</a></p>
   </section>
 
   <footer>
-    <p>&copy; 2025 Mojtaba Nayyeri &bull; <a href="#top">Back to top</a></p>
+    <p>&copy; 2025 Mojtaba Nayyeri • <a href="#top">Back to top</a></p>
   </footer>
+
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        document.querySelector(link.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  </script>
 </body>
 </html>
