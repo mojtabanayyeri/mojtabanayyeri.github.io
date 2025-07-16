@@ -123,6 +123,17 @@ a:hover {
 /* 1) Turn your sidebar into a flex‐column and center its children */
 .sidebar {
   width: 240px;
+  /* match main-content top padding */
+  padding: 8rem 1rem 2rem 2rem;  /* top‑right‑bottom‑left */
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;      /* keep items left‑aligned */
+  /* remove justify-content:center; */
+}
+/* .sidebar {
+  width: 240px;
   padding: 2rem 1rem 2rem 2rem;
   position: sticky;
   top: 0;
@@ -130,7 +141,7 @@ a:hover {
   flex-direction: column;   /* NEW */
   justify-content: center;  /* NEW: vertical centering */
   align-items: flex-start;  /* keep items left‐aligned */
-}
+} */
 
 /* 2) Give extra white space around the avatar and links if you like */
 .avatar {
