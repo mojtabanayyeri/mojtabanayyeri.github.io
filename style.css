@@ -23,6 +23,7 @@ a:hover {
 .container {
   display: flex;
   min-height: 100vh;
+  column-gap: 2rem;
 }
 .sidebar {
   width: 260px;
