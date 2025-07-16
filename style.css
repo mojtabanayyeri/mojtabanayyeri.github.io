@@ -31,6 +31,8 @@ a:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: static; 
+  height: 100vh;
 }
 .main-content {
   flex: 1;
