@@ -34,15 +34,7 @@ a:hover {
   min-height: 100vh;
   gap: 1rem;
 } */
-/* .sidebar {
-  width: 220px;
-  padding: 2rem 1rem 2rem 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: static; 
-  height: 100vh;
-} */
+
 .main-content {
   flex: 1;
   padding: 8rem 2rem 2rem 1rem;  /* top‑right‑bottom‑left: only 1rem on the left now */
