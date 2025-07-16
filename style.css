@@ -104,3 +104,8 @@ a:hover {
   margin-bottom: 0.75rem;
   font-size: 0.95rem;
 }
+/* highlight current page in sidebar */
+.links a.active {
+  font-weight: 700;
+  color: #0066ff;
+}
