@@ -2,150 +2,121 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mojtaba Nayyeri — Senior Researcher</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mojtaba Nayyeri</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
-    /* Reset */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; display: flex; min-height: 100vh; background: #fff; color: #1a202c; }
-    a { color: #3182ce; text-decoration: none; }
+    /* Global */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; color: #222; background: #fff; display: flex; }
+    a { color: #0066cc; text-decoration: none; }
     a:hover { text-decoration: underline; }
 
     /* Sidebar */
     .sidebar {
-      flex: 0 0 250px;
-      background: #f7fafc;
+      width: 280px;
       padding: 2rem 1.5rem;
-      border-right: 1px solid #e2e8f0;
+      border-right: 1px solid #eee;
     }
     .sidebar img {
-      width: 120px; height: 120px; border-radius: 50%; object-fit: cover;
-      display: block; margin: 0 auto 1rem;
-      border: 2px solid #3182ce;
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 1rem;
     }
     .sidebar h1 {
-      font-size: 1.5rem; text-align: center; margin-bottom: .5rem;
+      font-size: 1.75rem;
       font-weight: 600;
+      margin-bottom: 0.25rem;
     }
-    .sidebar p.subtitle {
-      font-size: .875rem; text-align: center; color: #4a5568; margin-bottom: 1.5rem;
+    .sidebar p {
+      font-size: 0.9rem;
+      color: #555;
+      margin-bottom: 1.5rem;
     }
     .sidebar ul {
       list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
       margin-top: 1rem;
+      line-height: 1.6;
     }
-    .sidebar ul a { font-size: .9rem; }
+    .sidebar ul li a { font-size: 0.95rem; color: #555; }
 
-    /* Main content */
-    main {
+    /* Main Content */
+    .main {
       flex: 1;
       padding: 2rem 3rem;
       overflow-y: auto;
     }
     section { margin-bottom: 2.5rem; }
     h2 {
-      font-size: 1.75rem;
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: #0066cc;
+      border-bottom: 2px solid #0066cc;
+      padding-bottom: 0.25rem;
       margin-bottom: 1rem;
-      border-bottom: 2px solid #3182ce;
-      padding-bottom: .25rem;
-      color: #3182ce;
+      display: inline-block;
     }
-    p, li { font-size: 1rem; line-height: 1.6; color: #2d3748; }
-    .card-grid {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-    .card {
-      background: #fff;
-      border: 1px solid #e2e8f0;
-      border-radius: 6px;
-      padding: 1rem 1.25rem;
-    }
-    .card h3 { font-size: 1.125rem; margin-bottom: .5rem; }
-    .pub-list { list-style: none; }
-    .pub-list li { margin-bottom: .75rem; }
-    .pub-year { font-weight: 600; margin-right: .5rem; }
+    p, ul { font-size: 1rem; color: #333; line-height: 1.6; }
+    ul li { margin-bottom: 0.5rem; }
 
-    /* Scrollbar hint for updates */
+    /* Updates */
     .updates {
       max-height: 200px;
       overflow-y: auto;
-      padding-right: .5rem;
+      padding-right: 0.5rem;
+      margin-bottom: 1.5rem;
     }
-    .updates li { margin-bottom: .5rem; font-size: .95rem; color: #4a5568; }
+    .updates li { font-size: 0.9rem; color: #444; }
   </style>
 </head>
 <body>
   <aside class="sidebar">
     <img src="assets/images/headshot.jpg" alt="Mojtaba Nayyeri">
     <h1>Mojtaba Nayyeri</h1>
-    <p class="subtitle">Senior Researcher in AI</p>
+    <p>Senior Researcher in Artificial Intelligence</p>
     <ul>
       <li><a href="#about">About</a></li>
-      <li><a href="#research">Research</a></li>
+      <li><a href="#updates">Updates</a></li>
       <li><a href="#publications">Publications</a></li>
-      <li><a href="#teaching">Teaching</a></li>
-      <li><a href="#cv">CV</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </aside>
 
-  <main>
+  <div class="main">
     <section id="about">
       <h2>About Me</h2>
-      <p>I’m a Senior Researcher at the Institute for Artificial Intelligence, University of Stuttgart, specializing in graph-based ML, geometric deep learning, large language models, and semantic-aware generative AI. My work focuses on [Key Contributions].</p>
+      <p>I’m a Senior Researcher at the Institute for Artificial Intelligence, University of Stuttgart, advised by Steffen Staab and Antonio Vergari. My work lies at the intersection of Foundation Models (LLMs) and Knowledge Graphs, exploring their integration for real-world AI applications.</p>
     </section>
 
-    <section id="research">
-      <h2>Research</h2>
-      <div class="card-grid">
-        <div class="card">
-          <h3>Project Title A</h3>
-          <p>Brief description of goals, methods, and findings.</p>
-        </div>
-        <div class="card">
-          <h3>Project Title B</h3>
-          <p>Brief description of goals, methods, and findings.</p>
-        </div>
-      </div>
+    <section id="updates">
+      <h2>Updates</h2>
+      <ul class="updates">
+        <li><strong>May 2025:</strong> Our work on corrective unlearning in GNNs to appear in ICML 2025.</li>
+        <li><strong>April 2025:</strong> Best Paper Award for persistent homology in content detection @ BeyondFacts.</li>
+        <li><strong>March 2025:</strong> Joined the MPI IMPRS-IS PhD program.</li>
+        <li><strong>Feb 2025:</strong> Leveraging persistent homology for controversial content detection @ WWW 2025.</li>
+      </ul>
     </section>
 
     <section id="publications">
-      <h2>Selected Publications</h2>
-      <ul class="pub-list">
-        <li><span class="pub-year">2024</span><strong>Title A</strong>, <em>Journal X</em>. <a href="#">PDF</a></li>
-        <li><span class="pub-year">2023</span><strong>Title B</strong>, <em>Conference Y</em>. <a href="#">Slides</a></li>
-      </ul>
-    </section>
-
-    <section id="teaching">
-      <h2>Teaching</h2>
+      <h2>Publications</h2>
       <ul>
-        <li><strong>Course 101:</strong> Intro to [Topic] (Semester, Year). <a href="#">PDF</a></li>
-        <li><strong>Course 202:</strong> Advanced [Topic] (Semester, Year). <a href="#">PDF</a></li>
+        <li>SEMMA: A Semantic Aware Knowledge Graph Foundation Model, _NeurIPS_ 2024.</li>
+        <li>Complex-NBFNet: Geometric GNNs over Complex Numbers, _ICLR_ 2024.</li>
       </ul>
-    </section>
-
-    <section id="cv">
-      <h2>Curriculum Vitae</h2>
-      <div class="card">
-        <a href="cv.pdf" target="_blank">Download Full CV (PDF)</a>
-      </div>
     </section>
 
     <section id="contact">
       <h2>Contact</h2>
       <ul>
         <li>Email: <a href="mailto:you@domain.edu">you@domain.edu</a></li>
-        <li>ORCID: <a href="https://orcid.org/your-orcid">0000-0000-0000-0000</a></li>
+        <li>ORCID: <a href="https://orcid.org/0000-0000-0000-0000">0000-0000-0000-0000</a></li>
+        <li>GitHub: <a href="https://github.com/yourusername">github.com/yourusername</a></li>
+        <li>LinkedIn: <a href="https://linkedin.com/in/yourprofile">linkedin.com/in/yourprofile</a></li>
       </ul>
     </section>
-  </main>
+  </div>
 </body>
 </html>
