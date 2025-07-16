@@ -33,7 +33,7 @@ a:hover {
 }
 .main-content {
   flex: 1;
-  padding: 8rem 3rem 2rem;
+  padding: 8rem 2rem 2rem;
   overflow-x: hidden;
 }
 
@@ -118,8 +118,8 @@ a:hover {
 
 /* 1) Turn your sidebar into a flex‐column and center its children */
 .sidebar {
-  width: 260px;
-  padding: 2rem;
+  width: 240px;
+  padding: 2rem 1rem 2rem 2rem;
   position: sticky;
   top: 0;
   display: flex;            /* NEW */
