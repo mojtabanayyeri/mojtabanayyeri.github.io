@@ -1,23 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
-
-  <title>Mojtaba Nayyeri &mdash; Senior Researcher</title>
-  <link rel="stylesheet" href="css/main.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mojtaba Nayyeri — Senior Researcher</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #1a202c;
+      --accent: #3182ce;
+      --bg: #f7fafc;
+      --font-body: 'Inter', sans-serif;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: var(--font-body);
+      color: var(--primary);
+      background: white;
+      line-height: 1.75;
+    }
+    header {
+      background: var(--primary);
+      color: white;
+      padding: 2rem 6%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .hero-content {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .headshot {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid white;
+    }
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+    }
+    .subtitle {
+      opacity: 0.85;
+    }
+    nav {
+      margin-top: 1rem;
+    }
+    .nav-links a {
+      margin-right: 1.5rem;
+      font-weight: 600;
+      color: white;
+      text-decoration: none;
+    }
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+    section {
+      padding: 3rem 6%;
+      background: white;
+    }
+    .section.alt {
+      background: var(--bg);
+    }
+    h2 {
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+      color: var(--accent);
+      border-bottom: 2px solid var(--accent);
+      display: inline-block;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+    }
+    ul.pub-list {
+      list-style: none;
+      padding-left: 0;
+    }
+    .pub-list li {
+      margin-bottom: 1rem;
+    }
+    .pub-year {
+      font-weight: 600;
+      margin-right: .5rem;
+    }
+    .btn {
+      display: inline-block;
+      padding: 0.75rem 1.25rem;
+      background: var(--accent);
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+    .btn:hover {
+      background: #2b6cb0;
+    }
+    footer {
+      background: var(--bg);
+      padding: 2rem 0;
+      text-align: center;
+      font-size: 0.875rem;
+    }
+  </style>
 </head>
 <body>
-  <!-- Hero / Header -->
-  <header class="hero">
+  <header>
     <div class="hero-content">
-      <img src="assets/images/headshot.jpg" alt="Mojtaba Nayyeri" class="headshot">
+      <img src="assets/images/headshot.jpg" alt="Mojtaba Nayyeri" class="headshot" />
       <div>
         <h1>Mojtaba Nayyeri</h1>
-        <p class="subtitle">Senior Researher in Artificial Intelligence</p>
+        <p class="subtitle">Senior Researcher in Artificial Intelligence</p>
         <nav class="nav-links">
           <a href="#about">About</a>
           <a href="#research">Research</a>
@@ -30,14 +146,11 @@
     </div>
   </header>
 
-  <!-- About Section -->
-  <section id="about" class="section">
+  <section id="about">
     <h2>About Me</h2>
-    <p>I’m currently a senior researcher at the Institute for Artificial Intelligence, University of Stuttgart
-, specializing in Graph-based machine learning, geometric deep learning, large language models, and Semantic-aware generative AI. My work focuses on [Key Contributions].</p>
+    <p>I’m currently a senior researcher at the Institute for Artificial Intelligence, University of Stuttgart, specializing in Graph-based machine learning, geometric deep learning, large language models, and Semantic-aware generative AI. My work focuses on [Key Contributions].</p>
   </section>
 
-  <!-- Research Section -->
   <section id="research" class="section alt">
     <h2>Research</h2>
     <div class="grid">
@@ -52,47 +165,35 @@
     </div>
   </section>
 
-  <!-- Publications Section -->
-  <section id="publications" class="section">
+  <section id="publications">
     <h2>Selected Publications</h2>
     <ul class="pub-list">
-      <li>
-        <span class="pub-year">2024</span>
-        <strong>Title A</strong>, <em>Journal X</em>. <a href="link">PDF</a>
-      </li>
-      <li>
-        <span class="pub-year">2023</span>
-        <strong>Title B</strong>, <em>Conference Y</em>. <a href="link">Slides</a>
-      </li>
+      <li><span class="pub-year">2024</span> <strong>Title A</strong>, <em>Journal X</em>. <a href="#">PDF</a></li>
+      <li><span class="pub-year">2023</span> <strong>Title B</strong>, <em>Conference Y</em>. <a href="#">Slides</a></li>
     </ul>
   </section>
 
-  <!-- Teaching Section -->
   <section id="teaching" class="section alt">
     <h2>Teaching</h2>
     <ul>
-      <li><strong>Course 101:</strong> Introduction to [Topic] (Semester, Year). Syllabus <a href="#">PDF</a></li>
-      <li><strong>Course 202:</strong> Advanced [Topic] (Semester, Year). Syllabus <a href="#">PDF</a></li>
+      <li><strong>Course 101:</strong> Introduction to [Topic] (Semester, Year). <a href="#">Syllabus PDF</a></li>
+      <li><strong>Course 202:</strong> Advanced [Topic] (Semester, Year). <a href="#">Syllabus PDF</a></li>
     </ul>
   </section>
 
-  <!-- CV Section -->
-  <section id="cv" class="section">
+  <section id="cv">
     <h2>Curriculum Vitae</h2>
     <a class="btn" href="cv.pdf" target="_blank">Download Full CV (PDF)</a>
   </section>
 
-  <!-- Contact Section -->
   <section id="contact" class="section alt">
     <h2>Contact</h2>
     <p>Email: <a href="mailto:you@domain.edu">you@domain.edu</a></p>
     <p>ORCID: <a href="https://orcid.org/your-orcid">0000-0000-0000-0000</a></p>
   </section>
 
-  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Your Name &bull; <a href="#">Top</a></p>
+    <p>&copy; 2025 Mojtaba Nayyeri &bull; <a href="#top">Back to top</a></p>
   </footer>
-  <script src="js/main.js"></script>
 </body>
 </html>
