@@ -1,98 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mojtaba Nayyeri</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-  <style>
-    /* Reset & base */
-    * { margin:0; padding:0; box-sizing:border-box; }
-    html, body { height:100%; }
-    body { display:flex; font-family:'Inter',sans-serif; font-size:16px; color:#222; background:#fff; }
-    a { color:#3182ce; text-decoration:none; }
-    a:hover { text-decoration:underline; }
-
-    /* Layout */
-    .container { display:grid; grid-template-columns:260px 1fr; height:100%; }
-    aside { padding:2rem 1.5rem; border-right:1px solid #eee; }
-    main { padding:2rem; overflow-y:auto; }
-
-    /* Sidebar */
-    aside img { width:100%; border-radius:6px; margin-bottom:1rem; }
-    aside h1 { font-size:1.75rem; font-weight:600; margin-bottom:0.25rem; }
-    aside p { font-size:0.875rem; color:#555; margin-bottom:1rem; }
-    aside ul { list-style:none; line-height:1.8; font-size:0.9rem; color:#555; }
-    aside ul li + li { margin-top:0.25rem; }
-    aside ul li a { color:#555; }
-
-    /* Sections */
-    section { margin-bottom:2.5rem; }
-    h2 { font-size:1.5rem; font-weight:400; color:#3182ce; border-bottom:2px solid #3182ce; display:inline-block; margin-bottom:1rem; }
-    p, ul { color:#333; line-height:1.6; }
-    ul li { margin-bottom:0.5rem; }
-
-    /* Updates scroll */
-    .updates { max-height:180px; overflow-y:auto; padding-right:0.5rem; }
-    .updates li { font-size:0.9rem; color:#444; }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Arvindh Arun</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container">
-    <aside>
-      <img src="assets/images/headshot.jpg" alt="Mojtaba Nayyeri">
-      <h1>Mojtaba Nayyeri</h1>
-      <p>Senior Researcher in Artificial Intelligence</p>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#updates">Updates</a></li>
-        <li><a href="#publications">Publications</a></li>
-        <li><a href="#teaching">Teaching</a></li>
-        <li><a href="#cv">CV</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+    <aside class="sidebar">
+      <h1 class="name">Arvindh Arun</h1>
+      <img class="avatar" src="profile.jpg" alt="Profile photo" />
+      <nav class="links">
+        <a href="#">curriculum vitae</a>
+        <a href="#">google scholar</a>
+        <a href="mailto:you@example.com">email</a>
+        <a href="#">github</a>
+        <a href="#">linkedin</a>
+        <a href="#">twitter</a>
+      </nav>
     </aside>
-    <main>
-      <section id="about">
-        <h2>About Me</h2>
-        <p>Hello! I’m a Senior Researcher at the Institute for Artificial Intelligence, University of Stuttgart, advised by Steffen Staab and Antonio Vergari. My work focuses on integrating foundational LLMs with knowledge graphs for semantic-aware AI solutions.</p>
+
+    <main class="main-content">
+      <section class="intro">
+        <p>
+          Hello There! I’m an
+          <a href="#">ELLIS</a> and
+          <a href="#">IMPRS‑IS</a> PhD student advised by
+          <a href="#">Steffen Staab</a> and
+          <a href="#">Antonio Vergari</a> (University of Edinburgh). I’m
+          generally interested in making ML systems learn better from data
+          with inherent symmetries and where the i.i.d. assumption does not
+          hold. My aim is to enhance the integration between Foundational
+          Models (specifically LLMs) and Knowledge Graphs, exploring their
+          mutual benefits and practical applications in real‑world
+          scenarios.
+        </p>
+        <p>
+          Feel free to reach out to me through my
+          <a href="mailto:you@example.com">email</a> if you want to have a
+          chat about ideas!
+        </p>
       </section>
-      <section id="updates">
+
+      <section class="updates">
         <h2>Updates</h2>
-        <ul class="updates">
-          <li><strong>May 2025:</strong> Our paper on corrective unlearning in GNNs accepted to ICML 2025.</li>
-          <li><strong>April 2025:</strong> Won Best Paper Award for persistent homology in content detection @ BeyondFacts.</li>
-          <li><strong>March 2025:</strong> Joined the MPI IMPRS-IS PhD program.</li>
-          <li><strong>Feb 2025:</strong> Presented work on controversial content detection @ WWW 2025.</li>
-          <li><strong>Aug 2024:</strong> Began ELLIS PhD program co-supervised by Staab & Vergari.</li>
-        </ul>
+        <div class="updates-list">
+          <div class="update">
+            <span class="date">May 2025:</span>
+            Our work on
+            <a href="#">corrective unlearning in GNNs</a> to appear in
+            ICML 2025!
+          </div>
+          <div class="update">
+            <span class="date">April 2025:</span>
+            Our work (with the InfoNet team from DeepMind) on
+            <a href="#">leveraging persistent homology for
+            controversial content detection</a> has won the Best Paper
+            Award at BeyondFacts @ WWW 2025!
+          </div>
+          <div class="update">
+            <span class="date">March 2025:</span>
+            I am now part of the
+            <a href="#">MPI IMPRS‑IS</a> PhD program.
+          </div>
+          <!-- …and so on… -->
+        </div>
       </section>
-      <section id="publications">
+
+      <section class="publications">
         <h2>Publications</h2>
         <ul>
-          <li>SEMMA: A Semantic-Aware KG Foundation Model — _NeurIPS_ 2024.</li>
-          <li>Complex-NBFNet for GNNs over Complex Numbers — _ICLR_ 2024.</li>
-        </ul>
-      </section>
-      <section id="teaching">
-        <h2>Teaching</h2>
-        <ul>
-          <li><strong>AI 101:</strong> Intro to Machine Learning (Winter 2024)</li>
-          <li><strong>Graph ML:</strong> Advanced Topics (Spring 2025)</li>
-        </ul>
-      </section>
-      <section id="cv">
-        <h2>CV</h2>
-        <p><a href="cv.pdf" target="_blank">Download Full CV (PDF)</a></p>
-      </section>
-      <section id="contact">
-        <h2>Contact</h2>
-        <ul>
-          <li>Email: <a href="mailto:you@domain.edu">you@domain.edu</a></li>
-          <li>ORCID: <a href="https://orcid.org/0000-0000-0000-0000">0000-0000-0000-0000</a></li>
-          <li>GitHub: <a href="https://github.com/yourusername">github.com/yourusername</a></li>
+          <li>SEMMA: A Semantic Aware Knowledge Graph Foundation Model</li>
+          <li>…</li>
         </ul>
       </section>
     </main>
