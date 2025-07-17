@@ -30,7 +30,7 @@ a:hover {
 }
 
 .main-content {
-  margin-left: calc(8rem + 240px + 1.5rem);  /* left offset + sidebar width + gap */
+  margin-left: calc(18rem + 240px + 1.5rem);  /* left offset + sidebar width + gap */
   padding-right: 1rem;
 }
 
@@ -44,7 +44,7 @@ a:hover {
 .sidebar {
   position: fixed;
   top: 12rem;         /* Adjust this to move it downward (e.g. 6rem = 96px) */
-  left: 8rem;        /* Adjust this to move it rightward from the left edge */
+  left: 18rem;        /* Adjust this to move it rightward from the left edge */
   width: 240px;
   max-height: calc(100vh - 12rem);
   overflow-y: auto;
