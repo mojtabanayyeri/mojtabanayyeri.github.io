@@ -30,20 +30,24 @@ a:hover {
 }
 
 .main-content {
+  margin-left: 260px;     /* sidebar width (240px) + gap (≈20px) */
+}
+/* .main-content {
   flex: 1;
   padding: 8rem 2rem 2rem 1rem;
   overflow-x: hidden;
-}
+} */
 
 /* -- sidebar content -- */
 .sidebar {
-  width: 240px;
-  padding: 8rem 1rem 2rem 2rem;
-  position: sticky;
-  top: 0;                /* <-- stick to the top of the container */
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  position: fixed;
+  top: 3rem;              /* push it down below your top-menu (≈ 3rem high) */
+  left: 1rem;             /* match your container’s left padding/margin */
+  width: 240px;           /* same as before */
+  /* optional: give it its own scroll if the links overflow */
+  max-height: calc(100vh - 3rem);
+  overflow-y: auto;
+  z-index: 10;            /* make sure it sits above the main-content */
 }
 
 /* .sidebar {
