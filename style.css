@@ -33,6 +33,7 @@ a:hover {
   margin-left: calc(4rem + 240px + 1.5rem);  /* left offset + sidebar width + gap */
   padding-right: 1rem;
 }
+
 /* .main-content {
   flex: 1;
   padding: 8rem 2rem 2rem 1rem;
@@ -42,10 +43,10 @@ a:hover {
 /* -- sidebar content -- */
 .sidebar {
   position: fixed;
-  top: 10rem;         /* Adjust this to move it downward (e.g. 6rem = 96px) */
+  top: 6rem;         /* Adjust this to move it downward (e.g. 6rem = 96px) */
   left: 4rem;        /* Adjust this to move it rightward from the left edge */
   width: 240px;
-  max-height: calc(100vh - 10rem);
+  max-height: calc(100vh - 6rem);
   overflow-y: auto;
   z-index: 10;
 }
