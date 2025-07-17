@@ -19,29 +19,33 @@ a:hover {
   text-decoration: underline;
 }
 
+/* -- layout container -- */
 .container {
   display: flex;
   min-height: 100vh;
-  /* make the layout no wider than 1200px, and center it */
-  max-width: 1200px;
-  margin: 0 auto;    /* auto‑margins left & right */
-  gap: 1.5rem;       /* space between sidebar and main */
-  padding: 2rem 1rem;/* optional breathing room on very narrow viewports */
+  max-width: 1200px;     /* make the layout no wider than 1200px */
+  margin: 3rem auto 0;   /* push down for header, center horizontally */
+  gap: 1.5rem;           /* space between sidebar and main */
+  padding: 2rem 1rem;    /* breathing room on narrow viewports */
 }
-/* -- layout -- */
-/* .container {
-  display: flex;
-  min-height: 100vh;
-  gap: 1rem;
-} */
 
 .main-content {
   flex: 1;
-  padding: 8rem 2rem 2rem 1rem;  /* top‑right‑bottom‑left: only 1rem on the left now */
+  padding: 8rem 2rem 2rem 1rem;  /* top‑right‑bottom‑left */
   overflow-x: hidden;
 }
 
 /* -- sidebar content -- */
+.sidebar {
+  width: 240px;
+  padding: 8rem 1rem 2rem 2rem;  /* same top padding as main */
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;      /* keep items left‑aligned */
+}
+
 .name {
   font-size: 1.75rem;
   font-weight: 400;
@@ -50,24 +54,35 @@ a:hover {
 .avatar {
   width: 100%;
   border-radius: 8px;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;          /* extra gap under avatar */
 }
+
+/* -- sidebar links with icons -- */
 .links a {
-  display: block;
-  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.75rem;       /* space between items */
   font-weight: 300;
   color: #666;
+}
+.links a i {
+  margin-right: 0.5rem;         /* gap between icon and text */
+  vertical-align: middle;
 }
 .links a:hover {
   color: #0066ff;
 }
+.links a.active {
+  font-weight: 700;
+  color: #0066ff;
+}
 
-/* -- intro -- */
+/* -- intro section -- */
 .intro p {
   margin-bottom: 1.25rem;
 }
 
-/* -- updates -- */
+/* -- updates section -- */
 .updates {
   margin-top: 3rem;
 }
@@ -91,7 +106,7 @@ a:hover {
   margin-right: 0.5rem;
 }
 
-/* -- publications -- */
+/* -- publications section -- */
 .publications {
   margin-top: 3rem;
 }
@@ -108,54 +123,8 @@ a:hover {
   margin-bottom: 0.75rem;
   font-size: 0.95rem;
 }
-/* highlight current page in sidebar */
-.links a.active {
-  font-weight: 700;
-  color: #0066ff;
-}
-/* constrain and center all sections */
-.content-wrapper {
-  max-width: 700px;
-  margin: 0 auto;      /* center horizontally */
-  padding: 1rem 0;     /* optional vertical breathing room */
-}
 
-/* 1) Turn your sidebar into a flex‐column and center its children */
-.sidebar {
-  width: 240px;
-  /* match main-content top padding */
-  padding: 8rem 1rem 2rem 2rem;  /* top‑right‑bottom‑left */
-  position: sticky;
-  top: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;      /* keep items left‑aligned */
-  /* remove justify-content:center; */
-}
-/* .sidebar {
-  width: 240px;
-  padding: 2rem 1rem 2rem 2rem;
-  position: sticky;
-  top: 0;
-  display: flex;            /* NEW */
-  flex-direction: column;   /* NEW */
-  justify-content: center;  /* NEW: vertical centering */
-  align-items: flex-start;  /* keep items left‐aligned */
-} */
-
-/* 2) Give extra white space around the avatar and links if you like */
-.avatar {
-  width: 100%;
-  border-radius: 8px;
-  margin-bottom: 2rem;      /* was 1.5rem; now more gap */
-}
-
-.links a {
-  display: block;
-  margin-bottom: 0.15rem;      /* was .75rem; now more gap */
-}
-
-/* top horizontal menu */
+/* -- top horizontal menu -- */
 header.top-menu {
   position: sticky;
   top: 0;
@@ -164,14 +133,12 @@ header.top-menu {
   background: #fff;
   border-bottom: 1px solid #eee;
   padding: 0.5rem 1rem;
-
-  display: flex;            /* NEW */
-  justify-content: center;  /* NEW: center its children */
+  display: flex;
+  justify-content: center;      /* center the nav */
 }
 header.top-menu nav {
   display: flex;
   gap: 1.5rem;
-  /* remove width:100% or margin hacks—flex centering on the header handles it */
 }
 header.top-menu a {
   font-weight: 500;
@@ -182,7 +149,9 @@ header.top-menu a:hover {
   color: #0066ff;
 }
 
-/* push the two‐column container down so it clears the menu */
-.container {
-  margin-top: 3rem;  /* adjust if needed */
+/* -- content wrapper constraint -- */
+.content-wrapper {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 1rem 0;
 }
