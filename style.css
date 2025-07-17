@@ -30,7 +30,7 @@ a:hover {
 }
 
 .main-content {
-  margin-left: calc(8rem + 240px + 1.5rem);  /* left offset + sidebar width + gap */
+  margin-left: calc(6rem + 240px + 1.5rem);  /* left offset + sidebar width + gap */
   padding-right: 1rem;
 }
 
