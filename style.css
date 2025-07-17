@@ -154,3 +154,31 @@ a:hover {
   display: block;
   margin-bottom: 0.15rem;      /* was .75rem; now more gap */
 }
+
+/* top horizontal menu */
+.top-menu {
+  width: 100%;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  padding: 0.5rem 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.top-menu nav {
+  display: flex;
+  gap: 1.5rem;
+}
+.top-menu a {
+  font-weight: 500;
+  color: #666;
+  text-decoration: none;
+}
+.top-menu a:hover {
+  color: #0066ff;
+}
+
+/* push the two‐column container down so it clears the menu */
+.container {
+  margin-top: 3rem; /* adjust if your header is taller/shorter */
+}
