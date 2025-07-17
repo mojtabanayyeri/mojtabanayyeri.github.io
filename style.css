@@ -1,8 +1,4 @@
 /* -- reset & base -- */
-html, body {
-  height: 100%;
-  overflow: hidden;
-}
 * {
   margin: 0;
   padding: 0;
@@ -166,6 +162,10 @@ header.top-menu a:hover {
 }
 @media (max-width: 768px) {
   /* make the container full‐height but stack it */
+  html, body {
+    height: 100%;
+    overflow: hidden;
+  }
   .container {
     display: block;
     height: calc(100% - 3rem);   /* leave room for the header */
