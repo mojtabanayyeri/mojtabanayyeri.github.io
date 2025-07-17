@@ -31,7 +31,7 @@ a:hover {
 
 .main-content {
   margin-left: calc(4rem + 240px + 1.5rem);  /* left offset + sidebar width + gap */
-  margin-top: 2rem;
+  margin-top: 4rem;
   padding-right: 1rem;
 }
 /* .main-content {
