@@ -156,7 +156,7 @@ a:hover {
 }
 
 /* top horizontal menu */
-top-menu {
+header.top-menu {
   position: sticky;
   top: 0;
   z-index: 100;
@@ -168,17 +168,17 @@ top-menu {
   display: flex;            /* NEW */
   justify-content: center;  /* NEW: center its children */
 }
-..top-menu nav {
+header.top-menu nav {
   display: flex;
   gap: 1.5rem;
   /* remove width:100% or margin hacks—flex centering on the header handles it */
 }
-.top-menu a {
+header.top-menu a {
   font-weight: 500;
   color: #666;
   text-decoration: none;
 }
-.top-menu a:hover {
+header.top-menu a:hover {
   color: #0066ff;
 }
 
