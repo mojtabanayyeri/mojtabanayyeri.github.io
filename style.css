@@ -30,7 +30,7 @@ a:hover {
 }
 
 .main-content {
-  margin-left: 260px;     /* sidebar width (240px) + gap (≈20px) */
+  margin-left: 280px;     /* sidebar width (240px) + gap (≈20px) */
 }
 /* .main-content {
   flex: 1;
@@ -42,8 +42,8 @@ a:hover {
 .sidebar {
   position: fixed;
   top: 3rem;              /* push it down below your top-menu (≈ 3rem high) */
-  left: 1rem;             /* match your container’s left padding/margin */
-  width: 240px;           /* same as before */
+  left: 3rem;             /* match your container’s left padding/margin */
+  width: 280px;           /* same as before */
   /* optional: give it its own scroll if the links overflow */
   max-height: calc(100vh - 3rem);
   overflow-y: auto;
