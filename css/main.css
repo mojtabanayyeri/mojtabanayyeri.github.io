@@ -84,9 +84,22 @@ p, li { font-size: 1rem; color: var(--clr-secondary); }
   gap: 2rem;
   margin-top: 2rem;
 }
-.sidebar {
+/* .sidebar {
   position: sticky;
   top: 1.5rem;
+} */
+.sidebar {
+  position: fixed;
+  top: 3rem;              /* push it down below your top-menu (≈ 3rem high) */
+  left: 1rem;             /* match your container’s left padding/margin */
+  width: 240px;           /* same as before */
+  /* optional: give it its own scroll if the links overflow */
+  max-height: calc(100vh - 3rem);
+  overflow-y: auto;
+  z-index: 10;            /* make sure it sits above the main-content */
+}
+.main-content {
+  margin-left: 260px;     /* sidebar width (240px) + gap (≈20px) */
 }
 .quick-links {
   list-style: none;
