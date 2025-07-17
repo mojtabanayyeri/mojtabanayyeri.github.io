@@ -156,19 +156,22 @@ a:hover {
 }
 
 /* top horizontal menu */
-.top-menu {
+top-menu {
+  position: sticky;
+  top: 0;
+  z-index: 100;
   width: 100%;
   background: #fff;
   border-bottom: 1px solid #eee;
   padding: 0.5rem 1rem;
-  position: sticky;
-  top: 0;
-  z-index: 100;
+
+  display: flex;            /* NEW */
+  justify-content: center;  /* NEW: center its children */
 }
-.top-menu nav {
+..top-menu nav {
   display: flex;
   gap: 1.5rem;
-  margin: 0 auto;       /* ← centers the nav block */
+  /* remove width:100% or margin hacks—flex centering on the header handles it */
 }
 .top-menu a {
   font-weight: 500;
@@ -181,5 +184,5 @@ a:hover {
 
 /* push the two‐column container down so it clears the menu */
 .container {
-  margin-top: 3rem; /* adjust if your header is taller/shorter */
+  margin-top: 3rem;  /* adjust if needed */
 }
