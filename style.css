@@ -30,8 +30,8 @@ a:hover {
 }
 
 .main-content {
-  flex: 1;            /* no manual margin-left needed */
-  padding-left: 1.5rem; /* give it your flex gap for breathing room */
+  margin-left: calc(4rem + 240px + 1.5rem);  /* left offset + sidebar width + gap */
+  padding-right: 1rem;
 }
 /* .main-content {
   flex: 1;
@@ -41,13 +41,11 @@ a:hover {
 
 /* -- sidebar content -- */
 .sidebar {
-  /* restore it to the flex layout in .container */
-  position: sticky;
-  top: 5rem;          /* e.g. header height + some breathing room */
-  align-self: flex-start; 
-  /* remove left, width can stay */
+  position: fixed;
+  top: 6rem;         /* Adjust this to move it downward (e.g. 6rem = 96px) */
+  left: 4rem;        /* Adjust this to move it rightward from the left edge */
   width: 240px;
-  max-height: calc(100vh - 5rem);
+  max-height: calc(100vh - 6rem);
   overflow-y: auto;
   z-index: 10;
 }
