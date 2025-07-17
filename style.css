@@ -30,7 +30,8 @@ a:hover {
 }
 
 .main-content {
-  margin-left: 280px;     /* sidebar width (240px) + gap (≈20px) */
+  flex: 1;            /* no manual margin-left needed */
+  padding-left: 1.5rem; /* give it your flex gap for breathing room */
 }
 /* .main-content {
   flex: 1;
@@ -40,14 +41,15 @@ a:hover {
 
 /* -- sidebar content -- */
 .sidebar {
-  position: fixed;
-  top: 3rem;              /* push it down below your top-menu (≈ 3rem high) */
-  left: 3rem;             /* match your container’s left padding/margin */
-  width: 280px;           /* same as before */
-  /* optional: give it its own scroll if the links overflow */
-  max-height: calc(100vh - 3rem);
+  /* restore it to the flex layout in .container */
+  position: sticky;
+  top: 5rem;          /* e.g. header height + some breathing room */
+  align-self: flex-start; 
+  /* remove left, width can stay */
+  width: 240px;
+  max-height: calc(100vh - 5rem);
   overflow-y: auto;
-  z-index: 10;            /* make sure it sits above the main-content */
+  z-index: 10;
 }
 
 /* .sidebar {
