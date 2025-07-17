@@ -43,10 +43,10 @@ a:hover {
 /* -- sidebar content -- */
 .sidebar {
   position: fixed;
-  top: 6rem;         /* Adjust this to move it downward (e.g. 6rem = 96px) */
+  top: 12rem;         /* Adjust this to move it downward (e.g. 6rem = 96px) */
   left: 4rem;        /* Adjust this to move it rightward from the left edge */
   width: 240px;
-  max-height: calc(100vh - 6rem);
+  max-height: calc(100vh - 12rem);
   overflow-y: auto;
   z-index: 10;
 }
