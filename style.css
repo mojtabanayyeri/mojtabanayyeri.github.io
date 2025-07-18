@@ -178,47 +178,50 @@ header.top-menu a:hover {
   padding: 1rem 0;
 }
 @media (max-width: 768px) {
-  /* allow full vertical scrolling */
   html, body {
     height: auto;
     overflow: auto;
   }
 
-  /* stack sidebar and main in one column */
   .container {
     display: flex;
     flex-direction: column;
-    margin-top: 3rem; /* leave room for header */
+    margin-top: 3rem;
     padding: 0 1rem;
   }
 
-  /* sidebar becomes full-width and static */
   .sidebar {
     position: static;
+    top: auto;
+    left: auto;
     width: 100%;
     max-height: none;
-    background: #fff;
     padding: 1rem 0;
+    background: #fff;
     border-bottom: 1px solid #eee;
   }
 
-  /* sidebar nav items inline or block for easy tapping */
-  .sidebar .links a {
-    display: inline-block;
-    width: auto;
-    margin: 0.5rem;
+  .avatar {
+    width: 40%;
+    display: block;
+    margin: 0 auto 1rem;
   }
 
-  /* main content flows below sidebar at full width */
   .main-content {
     position: static;
+    width: 100%;
     margin: 0;
     padding: 1rem 0;
-    width: 100%;
   }
 
-  /* reset the left-margin hack */
   .main-content .content-wrapper {
     margin: 0 auto;
+    padding: 0;
+  }
+
+  .links a {
+    display: inline-block;
+    margin-right: 0.75rem;
+    margin-bottom: 0.5rem;
   }
 }
