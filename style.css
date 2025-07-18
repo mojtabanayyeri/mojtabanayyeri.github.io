@@ -178,38 +178,47 @@ header.top-menu a:hover {
   padding: 1rem 0;
 }
 @media (max-width: 768px) {
-  /* make the container full‐height but stack it */
+  /* allow full vertical scrolling */
   html, body {
-    height: 100%;
-    overflow: hidden;
+    height: auto;
+    overflow: auto;
   }
+
+  /* stack sidebar and main in one column */
   .container {
     display: flex;
-    height: calc(100% - 3rem);   /* leave room for the header */
-    margin-top: 3rem;            /* push below the top menu */
+    flex-direction: column;
+    margin-top: 3rem; /* leave room for header */
+    padding: 0 1rem;
   }
 
-  /* pin the sidebar left, full‐height under the header */
+  /* sidebar becomes full-width and static */
   .sidebar {
-    position: sticky;
-    top: 3rem;                   /* match your header height */
-    left: 0;
-    bottom: 0;
-    width: 240px;                /* you can tweak this */
-    padding: 1rem;
-    overflow-y: auto;
-    background: #fff;            /* keep its white background */
-    z-index: 50;
+    position: static;
+    width: 100%;
+    max-height: none;
+    background: #fff;
+    padding: 1rem 0;
+    border-bottom: 1px solid #eee;
   }
 
-  /* push the main‐content over, and let it scroll in its own pane */
+  /* sidebar nav items inline or block for easy tapping */
+  .sidebar .links a {
+    display: inline-block;
+    width: auto;
+    margin: 0.5rem;
+  }
+
+  /* main content flows below sidebar at full width */
   .main-content {
-    position: absolute;
-    top: 3rem;                   /* below header */
-    left: 200px;                 /* sidebar’s width */
-    right: 0;
-    bottom: 0;
-    padding: 1rem;
-    overflow-y: auto;
+    position: static;
+    margin: 0;
+    padding: 1rem 0;
+    width: 100%;
+  }
+
+  /* reset the left-margin hack */
+  .main-content .content-wrapper {
+    margin: 0 auto;
   }
 }
