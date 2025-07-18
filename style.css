@@ -224,4 +224,15 @@ header.top-menu a:hover {
     margin-right: 0.75rem;
     margin-bottom: 0.5rem;
   }
+
+  .name {
+    text-align: center;
+    width: 100%;
+  }
+
+  .sidebar .links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
