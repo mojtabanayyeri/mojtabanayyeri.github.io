@@ -188,23 +188,50 @@ header.top-menu a:hover {
     flex-direction: column;
     margin-top: 3rem;
     padding: 0 1rem;
+    align-items: center; /* center child blocks horizontally */
   }
 
   .sidebar {
     position: static;
-    top: auto;
-    left: auto;
-    width: 100%;
+    width: 280px;  /* fixed width for visual centering */
+    max-width: 100%;
     max-height: none;
     padding: 1rem 0;
     background: #fff;
     border-bottom: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* center contents */
   }
 
   .avatar {
-    width: 40%;
+    width: 60%;
+    max-width: 150px;
+    border-radius: 8px;
     display: block;
-    margin: 0 auto 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .name {
+    text-align: center;
+    width: 100%;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .sidebar .links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
   }
 
   .main-content {
@@ -217,22 +244,5 @@ header.top-menu a:hover {
   .main-content .content-wrapper {
     margin: 0 auto;
     padding: 0;
-  }
-
-  .links a {
-    display: inline-block;
-    margin-right: 0.75rem;
-    margin-bottom: 0.5rem;
-  }
-
-  .name {
-    text-align: center;
-    width: 100%;
-  }
-
-  .sidebar .links {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
   }
 }
